@@ -1,21 +1,49 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, Button, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation-stack';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+import Main from './pages/PageOne';
+import BookAppointment from './pages/BookAppointment'
+import JoinQueue from './pages/JoinQueue'
+import SmallBusiness from './pages/SmallBusiness';
+import Personal from './pages/Personal'
+import Commercial from './pages/Commercial'
+import Confirmation from './pages/Confirmation';
+
+const App = createStackNavigator({
+    Welcome: {
+      screen: Main
+    }, 
+    'Join the Queue': 
+    { 
+      screen: BookAppointment 
+    },
+    'Join Queue':
+    {
+      screen: JoinQueue
+    },
+    'Small Business Banking':
+    {
+      screen: SmallBusiness
+    },
+    'Personal Banking':
+    {
+      screen: Personal
+    },
+    'Commercial Banking':
+    {
+      screen: Commercial
+    },
+    Confirmation:
+    {
+      screen: Confirmation
+    },
   },
-});
+  {
+    initialRouteName: 'Welcome',
+  }
+);
+export default createAppContainer(App);
