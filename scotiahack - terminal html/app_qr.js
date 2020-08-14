@@ -139,8 +139,8 @@ class CustomerManager {
             id = "001";
             name = "Joshua Hur";
             status = "senior";
-            purpose = "personal";
-            service = "open account";
+            purpose = "business";
+            service = "small business specialist";
             checkedIn = true
             hasApp = true
         } else if (this.customerNumber == 2) {
