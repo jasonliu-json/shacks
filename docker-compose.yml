@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:11
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: secret
+    restart: on-failure
+    volumes:
+      - ./db_init:/docker-entrypoint-initdb.d
