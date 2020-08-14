@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Customers Queue</title>
+   </head>
+
+   <body>
+      <h2>Customers in Regular Queue</h2>
+      <h2 id="oof1"> </h2>
+      <h2>Customers in Priority Queue</h2>
+      <h2 id="oof2"> </h2>
+      <h2 id="oof3"></h2>
+   </body>
+   <script>
+       console.log((localStorage.getItem("index")));
+        console.log(localStorage.getItem("1"));
+        var info = "1. name: unknown; purpose: " + localStorage.getItem("purpose") + "; service: " + localStorage.getItem("service");
+        document.getElementById("oof1").innerHTML = info;
+        
+        if (localStorage.getItem("index") == "2") {
+            console.log(localStorage.getItem("2"));
+            document.getElementById("oof2").innerHTML = "1. " + localStorage.getItem("2");
+        }  
+        
+        localStorage.setItem("index", "2");
+        
+   </script>
+</html>
