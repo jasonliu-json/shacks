@@ -21,6 +21,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "privacy": "unlisted",
+    "android": {
+      "package": "com.shacks.scqueue"
     }
   }
 }
